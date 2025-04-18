@@ -27,10 +27,30 @@ body {
     padding: 0 2rem;
 }
 
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+}
+
+.header-content {
+    flex: 1;
+}
+
 /* Typography */
 h1 {
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: 1.2;
@@ -73,10 +93,26 @@ a:hover {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 2rem;
+    align-items: start;
 }
 
 .publication:last-child {
     border-bottom: none;
+}
+
+.publication-content {
+    flex: 1;
+}
+
+.publication-image {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .publication p {
@@ -130,6 +166,21 @@ footer {
 
     .container {
         padding: 0 1.5rem;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .publication {
+        grid-template-columns: 1fr;
+    }
+
+    .publication-image {
+        width: 100%;
+        height: 200px;
     }
 
     h1 {
