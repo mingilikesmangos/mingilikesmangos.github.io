@@ -8,22 +8,11 @@
     {% seo %}
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     {{ content }}
 
     <footer>
         <div class="container">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
         </div>
     </footer>
 </body>
