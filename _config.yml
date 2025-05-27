@@ -1,0 +1,19 @@
+title: Mingi Lee
+description: Homepage
+baseurl: ""
+url: "https://mingilikesmangos.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/ 
