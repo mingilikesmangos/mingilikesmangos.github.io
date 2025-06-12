@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -47,8 +47,8 @@ body {
 }
 
 .nav-logo {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 
 .nav-links {
@@ -79,7 +79,7 @@ body {
 /* Profile section */
 .header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 3rem;
     gap: 2rem;
 }
@@ -87,10 +87,11 @@ body {
 .profile-image {
     width: 250px;
     height: 300px;
-    border-radius: 20px;
+    border-radius: 30px;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 16px 16px rgba(0,0,0,0.1);
     flex-shrink: 0;
+    margin-top: 0;
 }
 
 .header-content {
@@ -166,7 +167,7 @@ body {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
     display: flex;
     gap: 2rem;
     transition: all 0.3s ease;
@@ -178,7 +179,7 @@ body {
 }
 
 .publication-image {
-    width: 300px;
+    width: 400px;
     height: auto;
     object-fit: contain;
     border-radius: 4px;
