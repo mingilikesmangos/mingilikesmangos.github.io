@@ -1,0 +1,517 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.nav-links a:visited {
+    color: #333;
+}
+
+/* Main content */
+.main-content {
+    padding: 2rem 0;
+}
+
+/* Profile section */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.profile-image-wrapper {
+    perspective: 1000px;
+    width: 250px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-image-wrapper .profile-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 16px 16px rgba(0,0,0,0.1);
+}
+
+.profile-image-wrapper .back {
+    transform: rotateY(180deg);
+}
+
+.profile-image-wrapper.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.profile-image-wrapper.flipped .back {
+    transform: rotateY(360deg);
+}
+
+.profile-image {
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 16px 16px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    margin-top: 0;
+}
+
+.header-content {
+    flex: 1;
+    padding-top: 0.5rem;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.header-content h1 strong {
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.header-content a {
+    color: #FF8C00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-content a:hover {
+    color: #FFA500;
+}
+
+.header-content a:visited {
+    color: #FF8C00;
+}
+
+.intro-section {
+    margin-bottom: 3rem;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.intro-section p a {
+    color: #FF8C00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.intro-section p a:hover {
+    color: #FFA500;
+}
+
+.intro-section p a:visited {
+    color: #FF8C00;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Publications */
+.publication {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+.publication-content {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.publication-image {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.publication h3 {
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.publication .links {
+    margin-top: 1rem;
+}
+
+.publication .links a {
+    color: #FF8C00;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.publication .links a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+.publication-description {
+    margin: 1rem 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.publication-description a {
+    color: #FF8C00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.publication-description a:hover {
+    color: #FFA500;
+}
+
+.publication-description a:visited {
+    color: #FF8C00;
+}
+
+.publication-content p a,
+.publication-content p a:visited,
+.publication-content p a:hover {
+    color: #FF8C00 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.publication-content p a:hover {
+    color: #FFA500 !important;
+}
+
+.dark-mode .publication-content p a,
+.dark-mode .publication-content p a:visited {
+    color: #FFA500 !important;
+}
+
+.dark-mode .publication-content p a:hover {
+    color: #FFB84D !important;
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    color: #666;
+}
+
+/* Content sections */
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.content-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.content-card h3 {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.content-card ul {
+    list-style: none;
+}
+
+.content-card li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.content-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+}
+
+.content-card p {
+    margin-bottom: 1.5rem;
+}
+
+.content-card p a {
+    color: #FF8C00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-card p a:hover {
+    color: #FFA500;
+}
+
+.content-card p a:visited {
+    color: #FF8C00;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.dark-mode-toggle .moon-icon {
+    display: none;
+}
+
+.dark-mode-toggle .sun-icon {
+    display: block;
+}
+
+.dark-mode .dark-mode-toggle .moon-icon {
+    display: block;
+}
+
+.dark-mode .dark-mode-toggle .sun-icon {
+    display: none;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.dark-mode .navbar {
+    background-color: #333333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.dark-mode .nav-brand {
+    color: #e0e0e0;
+}
+
+.dark-mode .nav-links a {
+    color: #f0f0f0;
+}
+
+.dark-mode .nav-links a:hover {
+    color: #ffffff;
+}
+
+.dark-mode .publication {
+    background: #333333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.dark-mode .publication h3 {
+    color: #f0f0f0;
+}
+
+.dark-mode .publication-description {
+    color: #f0f0f0;
+}
+
+.dark-mode .publication .links a {
+    color: #FFA500;
+}
+
+.dark-mode .publication .links a:hover {
+    color: #FFB84D;
+}
+
+.dark-mode .content-card {
+    background: #333333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.dark-mode .content-card h3 {
+    color: #f0f0f0;
+}
+
+.dark-mode footer {
+    background: #333333;
+    color: #f0f0f0;
+}
+
+.dark-mode .header-content h1 {
+    color: #f0f0f0;
+}
+
+.dark-mode .header-content h1 strong {
+    color: #f0f0f0;
+}
+
+.dark-mode .header-content p {
+    color: #f0f0f0;
+}
+
+.dark-mode .header-content a {
+    color: #FFA500;
+}
+
+.dark-mode .header-content a:hover {
+    color: #FFB84D;
+}
+
+.dark-mode .header-content a:visited {
+    color: #FFA500;
+}
+
+.dark-mode .intro-section p {
+    color: #f0f0f0;
+}
+
+.dark-mode .intro-section p a {
+    color: #FFA500;
+}
+
+.dark-mode .intro-section p a:hover {
+    color: #FFB84D;
+}
+
+.dark-mode .intro-section p a:visited {
+    color: #FFA500;
+}
+
+.dark-mode a {
+    color: #FFA500;
+}
+
+.dark-mode a:hover {
+    color: #FFB84D;
+}
+
+.dark-mode a:visited {
+    color: #FF8C00;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .profile-image-wrapper {
+        margin: 0 auto 1rem;
+    }
+
+    .publication {
+        flex-direction: column;
+    }
+
+    .publication-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+} 
