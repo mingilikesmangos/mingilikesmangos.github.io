@@ -1,0 +1,24 @@
+title: Mingi Lee
+description: "Ph.D. student in 3D Vision Lab at Seoul National University. Research in 3D CAD generation, geometric learning, BrepDiff, and B-rep diffusion models."
+baseurl: ""
+url: "https://mingilikesmangos.github.io"
+
+# SEO settings
+author: "Mingi Lee"
+keywords: ["Mingi Lee", "3D Vision", "CAD generation", "geometric learning", "BrepDiff", "B-rep diffusion", "Seoul National University", "3D Vision Lab", "Young Min Kim"]
+google_analytics: # Add your Google Analytics ID here if you have one
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/ 

@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Mingi Lee - 3D Vision | BrepDiff | CAD Generation"
+description: "Ph.D. student researching 3D CAD generation and geometric learning. Author of BrepDiff, a single-stage B-rep diffusion model for generating Boundary Representations."
+keywords: ["Mingi Lee", "Dongsu Zhang", "Clément Jambon", "BrepDiff", "3D CAD generation", "B-rep diffusion", "geometric learning", "Seoul National University", "3D Vision Lab"]
+---
+
+<div class="container">
+    <div class="header">
+        <div class="profile-image-wrapper">
+            <img src="{{ '/assets/images/profile1.jpg' | relative_url }}" alt="Mingi Lee" class="profile-image front">
+            <img src="{{ '/assets/images/profile2.jpg' | relative_url }}" alt="Mingi Lee 2" class="profile-image back">
+        </div>
+        <div class="header-content">
+            <h1><strong>Mingi</strong> Lee</h1>
+            <p>I'm a Ph.D. student in the <a href="https://3d.snu.ac.kr/">3D Vision Lab</a> at Seoul National University, advised by <a href="https://3d.snu.ac.kr/members/">Prof. Young Min Kim</a>.
+            My research lies at the intersection of 3D CAD generation and geometric learning, with a focus on bridging functional design and generative modeling.
+            I aim to develop structure-aware, editable CAD systems that are grounded in real-world usability, by integrating geometric reasoning, differentiable physics, and generative models.
+            Beyond research, I love to boulder🧗, ski⛷, snorkel🤿.
+            Feel free to reach out to me for any kinds of discussions or collaborations from research to a climbing session.🙇‍♂️</p>
+            <strong>Contact: <a href="mailto:mingi1019@snu.ac.kr">Email</a>, <a href="https://www.linkedin.com/in/mingilikesmangos" target="_blank">LinkedIn</a></strong>
+        </div>
+    </div>
+
+    <h2>Publications</h2>
+    <div class="publication">
+        <div class="publication-content">
+            <h3>BrepDiff: Single-stage B-rep Diffusion Model</h3>
+            <p><strong>Mingi Lee</strong>*, 
+                <a href="https://dszhang.me/about">Dongsu Zhang</a>*, 
+                <a href="https://clementjambon.github.io/">Clément Jambon</a>*, 
+                <a href="https://3d.snu.ac.kr/members/">Young Min Kim</a></p>
+            <p><em>SIGGRAPH 2025</em></p>
+            <p class="publication-description">BrepDiff is a simple, single-stage diffusion model for generating Boundary Representations (B-reps). It generates B-reps by denoising point-based face samples with a dedicated noise schedule. Unlike multi-stage methods, BrepDiff enables intuitive, editable geometry creation, including completion, merging, and interpolation, while achieving competitive performance on unconditional generation.</p>
+            <div class="links">
+                <a href="https://brepdiff.github.io/">project page</a>
+                <a href="https://drive.google.com/file/d/1ZkdjmljmbJer5Lbn55UwKRqR9AcHBydA/view?usp=sharing">pdf</a>
+                <a href="https://github.com/brepdiff/brepdiff">code</a>
+            </div>
+        </div>
+        <img src="{{ '/assets/images/brepdiff.jpg' | relative_url }}" alt="BrepDiff" class="publication-image">
+    </div>
+
+</div>

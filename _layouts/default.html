@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="7XMjbb_G92t3XsJxcsYhblL3gNO_VcYgJsfEeYAHJ9M" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC7GX96035"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BC7GX96035');
+    </script>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{{ '/' | relative_url }}" class="nav-brand">
+                <img src="{{ '/assets/favicons/favicon-32x32.png' | relative_url }}" alt="Logo" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/etc' | relative_url }}">Etc</a>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme preference or use system preference
+        const currentTheme = localStorage.getItem('theme') || 
+            (prefersDarkScheme.matches ? 'dark' : 'light');
+        
+        // Set initial theme
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+        
+        // Toggle theme
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Spin profile image
+        const profileImageWrapper = document.querySelector('.profile-image-wrapper');
+        if (profileImageWrapper) {
+            // Hint on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => {
+                    profileImageWrapper.classList.add('flipped');
+                    setTimeout(() => {
+                        profileImageWrapper.classList.remove('flipped');
+                    }, 300); // Duration the back is shown
+                }, 500); // Delay before the spin starts
+            });
+
+            // Handle click
+            profileImageWrapper.addEventListener('click', () => {
+                profileImageWrapper.classList.toggle('flipped');
+            });
+        }
+    </script>
+</body>
+</html> 
