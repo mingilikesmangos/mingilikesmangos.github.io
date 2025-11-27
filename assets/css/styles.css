@@ -491,6 +491,74 @@ footer {
     color: #FF8C00;
 }
 
+/* Misc section */
+.misc {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.misc-content {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.misc-content h3 {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.misc .links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.misc .links a {
+    color: #FF8C00;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.misc .links a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+.misc table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.misc table td {
+    padding: 5px;
+}
+
+.misc table img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dark-mode .misc {
+    background: #333333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.dark-mode .misc-content h3 a {
+    color: #FFA500;
+}
+
+.dark-mode .misc-content h3 a:hover {
+    color: #FFB84D;
+}
+
+.dark-mode .misc-content h3 a:visited {
+    color: #FFA500;
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
