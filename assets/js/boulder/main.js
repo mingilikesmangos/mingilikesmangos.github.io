@@ -83,11 +83,11 @@ function init(root) {
 
     // ----- sizing -----
     const view = { hw: 1, hh: 1 };            // frustum half size at zoom 1
-    const PX = Number(params.get('px')) || 2;   // screen pixels per art pixel (?px=N to override)
+    const PX = Number(params.get('px')) || 0;   // screen pixels per art pixel (?px=N to override)
     function resize() {
         const W = root.querySelector('.boulder-stage').clientWidth;
         const wide = W >= 640;
-        const P = PX;
+        const P = PX || (wide ? 2 : 1);   // finer art pixels on phones so small figures keep their detail
         const aspect = wide ? 16 / 10 : 1;
         const lowW = Math.max(64, Math.floor(W / P));
         const lowH = Math.max(64, Math.round(lowW / aspect));
