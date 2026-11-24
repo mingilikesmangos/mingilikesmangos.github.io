@@ -5,4 +5,6 @@ title: Etc
 
 <div class="container">
     <h1>I like mangos</h1>
-</div> 
+    <p class="boulder-intro">...and bouldering.</p>
+    {% include boulder.html %}
+</div>

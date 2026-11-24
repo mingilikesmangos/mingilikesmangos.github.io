@@ -559,6 +559,95 @@ footer {
     color: #FFA500;
 }
 
+/* Boulder pixel diorama (etc page) */
+.boulder-intro {
+    margin: 0.5rem 0 1rem;
+    color: #666;
+}
+
+.boulder-scene {
+    margin: 1rem 0 2.5rem;
+}
+
+.boulder-stage {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.boulder-canvas {
+    display: block;
+    image-rendering: pixelated;
+    cursor: grab;
+    touch-action: pan-y;
+    outline: none;
+}
+
+.boulder-scene.is-dragging .boulder-canvas {
+    cursor: grabbing;
+}
+
+.boulder-canvas:focus-visible {
+    outline: 2px dashed #FFA500;
+    outline-offset: 4px;
+}
+
+.boulder-fallback {
+    display: none;
+    color: #888;
+}
+
+.boulder-scene.is-unsupported .boulder-canvas {
+    display: none;
+}
+
+.boulder-scene.is-unsupported .boulder-fallback {
+    display: block;
+}
+
+.boulder-zoom {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.boulder-scene.is-unsupported .boulder-zoom {
+    display: none;
+}
+
+.boulder-zoom-btn {
+    font: 700 1rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    color: #555;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.boulder-zoom-btn:hover:not(:disabled) {
+    border-color: #FFA500;
+}
+
+.boulder-zoom-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.dark-mode .boulder-zoom-btn {
+    color: #bbb;
+    background: rgba(40, 40, 40, 0.85);
+    border-color: #555;
+}
+
+.dark-mode .boulder-intro {
+    color: #bbb;
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;

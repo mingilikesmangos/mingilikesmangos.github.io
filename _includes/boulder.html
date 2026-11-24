@@ -1,0 +1,15 @@
+<section class="boulder-scene" data-boulder>
+    <div class="boulder-stage">
+        <canvas class="boulder-canvas" tabindex="0" role="img"
+                aria-label="Pixel-art diorama of an outdoor boulder with crash pads. Drag or use arrow keys to rotate; use the + and − buttons to zoom."></canvas>
+        <p class="boulder-fallback">This diorama needs WebGL.</p>
+        <div class="boulder-zoom">
+            <button type="button" class="boulder-zoom-btn" data-action="zoom-in" aria-label="Zoom in">+</button>
+            <button type="button" class="boulder-zoom-btn" data-action="zoom-out" aria-label="Zoom out">&minus;</button>
+        </div>
+    </div>
+</section>
+<script type="importmap">
+{ "imports": { "three": "{{ '/assets/js/lib/three/three.module.min.js' | relative_url }}" } }
+</script>
+<script type="module" src="{{ '/assets/js/boulder/main.js' | relative_url }}"></script>
